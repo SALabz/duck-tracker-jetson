@@ -1,0 +1,8 @@
+build/
+*.engine
+*.onnx
+*.pt
+runs/
+__pycache__/
+*.o
+*.bin

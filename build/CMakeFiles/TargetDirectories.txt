@@ -1,3 +1,0 @@
-/home/seraj/Documents/duck_tracker_sw_stack_Jet/build/CMakeFiles/duck_tracker.dir
-/home/seraj/Documents/duck_tracker_sw_stack_Jet/build/CMakeFiles/edit_cache.dir
-/home/seraj/Documents/duck_tracker_sw_stack_Jet/build/CMakeFiles/rebuild_cache.dir
