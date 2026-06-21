@@ -7,6 +7,7 @@
 #include <NvInfer.h>
 #include <NvOnnxParser.h>
 #include <cuda_runtime.h>
+#include "preprocess_plugin.h"
 
 #include "pid_controller.h"
 #include "serial_control.h"
@@ -89,6 +90,11 @@ int main() {
     fclose(f);
 
     // Deserialize engine
+    // Register PreprocessPlugin with TensorRT
+    static PreprocessPluginCreator preprocessCreator;
+    getPluginRegistry()->registerCreator(preprocessCreator, "");
+    std::cout << "PreprocessPlugin registered with TensorRT." << std::endl;
+
     auto runtime = nvinfer1::createInferRuntime(gLogger);
     auto engine  = runtime->deserializeCudaEngine(engineData.data(), size);
     auto context = engine->createExecutionContext();

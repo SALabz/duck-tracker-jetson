@@ -25,6 +25,7 @@ add_executable(duck_tracker
     src/serial_control.cpp
     src/preprocess_kernel.cu
     src/centroid_kernel.cu
+    src/preprocess_plugin.cpp
 )
 
 target_link_libraries(duck_tracker
